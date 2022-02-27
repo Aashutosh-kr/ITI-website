@@ -342,6 +342,8 @@ main section div {
 form {
     width: 80%;
     height: 40vh;
+    border-radius: 20px;
+    padding: 2rem;
     box-shadow: var(--shadow);
 }
 
