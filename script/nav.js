@@ -1,4 +1,4 @@
-// for sliding of nav bar in small screen devices
+// for Showing and hiding of nav bar in small screen devices
 
 const menubtn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
@@ -13,15 +13,26 @@ menubtn.addEventListener('click', () => {
     }
 })
 
+// not working
+
+// if (nav.id == 'nav-shown') {
+//     document.addEventListener('click', () => {
+//         if (nav.id != 'nav-hidden') {
+//             nav.id = 'nav-hidden';
+//             menubtn.style.backgroundImage = 'url(../img/icon-hamburger.svg)';
+//             console.log('if');
+//         }
+//     })
+// }
+
+
+// For showing scroll to top button
+
+let topbtn = document.querySelector('.topbtn');
 document.addEventListener('scroll', () => {
-    if (nav.id != 'nav-hidden') {
-        nav.id = 'nav-hidden';
-        menubtn.style.backgroundImage = 'url(../img/icon-hamburger.svg)';
+    if (scrollY >= 300) {
+        topbtn.style.display = "flex";
+    } else {
+        topbtn.style.display = "none";
     }
 })
-
-// let topbtn = document.querySelector('.topbtn');
-// document.addEventListener('scrollDown', () => {
-//     topbtn.style.backgroundColor = "red";
-//     console.log('fired................');
-// })

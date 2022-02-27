@@ -42,7 +42,7 @@ a {
     --color-white: 0, 0%, 100%;
     --transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
     /* Others */
-    --gap: 2rem;
+    --gap: 3rem;
     --header-height: 5rem;
     --nav-height: 4rem;
     --shadow: 0px 4px 10px 2px hsl(0deg 2% 41%);
@@ -220,7 +220,7 @@ nav {
 }
 
 .topbtn {
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 9999;
     bottom: 2rem;
@@ -285,7 +285,7 @@ nav {
 .grid-container {
     position: relative;
     display: grid;
-    gap: var(--gap);
+    gap: 3rem;
     grid-template-areas: "aside main";
     margin: auto;
     width: 75vw;
@@ -321,7 +321,7 @@ hr {
 } */
 
 main section h1,
-main section h2 {
+main section:not(#contact) h2 {
     padding-top: calc(var(--header-height) + 2rem);
 }
 
@@ -330,7 +330,7 @@ main section:not(#contact) {
     min-height: 100vh;
 }
 
-main section div {
+main section>div {
     font-size: 1.4rem;
     font-family: "Redacted Script", cursive;
 }
@@ -341,10 +341,49 @@ main section div {
 
 form {
     width: 80%;
-    height: 40vh;
+    min-height: 45vh;
     border-radius: 20px;
     padding: 2rem;
     box-shadow: var(--shadow);
+}
+
+form>div {
+    min-height: 3.5rem;
+    justify-content: space-between;
+}
+
+form label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: var(--ff-bellefair);
+}
+
+form input,
+form textarea {
+    padding-left: 0.5rem;
+    border-radius: 8px;
+}
+
+form input {
+    width: 100%;
+    min-height: 1.6rem;
+}
+
+form ::placeholder {
+    color: hsl(var(--color-dark));
+}
+
+form textarea {
+    width: 100%;
+    min-height: 4rem;
+    padding: 0.5rem;
+    resize: vertical;
+}
+
+#submit {
+    width: max-content;
+    padding: 0.2rem 1rem;
+    margin: auto;
 }
 
 footer {
@@ -408,7 +447,14 @@ footer {
         justify-content: space-around;
         text-align: left;
     }
+    .grid-container {
+        width: 85vw;
+    }
     aside {
         width: 100%;
+    }
+    form {
+        width: 100%;
+        padding: 1.5rem;
     }
 }
