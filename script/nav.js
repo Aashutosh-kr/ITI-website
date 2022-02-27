@@ -12,3 +12,16 @@ menubtn.addEventListener('click', () => {
         menubtn.style.backgroundImage = 'url(../img/icon-hamburger.svg)';
     }
 })
+
+document.addEventListener('scroll', () => {
+    if (nav.id != 'nav-hidden') {
+        nav.id = 'nav-hidden';
+        menubtn.style.backgroundImage = 'url(../img/icon-hamburger.svg)';
+    }
+})
+
+// let topbtn = document.querySelector('.topbtn');
+// document.addEventListener('scrollDown', () => {
+//     topbtn.style.backgroundColor = "red";
+//     console.log('fired................');
+// })

@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-    <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="script/nav.js" defer></script>
+    <script src="script/corousel.js" defer></script>
 </head>
 <header class="flex space-between align-center">
     <div class="logo">
@@ -33,21 +35,68 @@
         </ul>
     </nav>
 </header>
-<div class="grid-container">
+<div id="top" class="grid-container">
+    <div class="topbtn flex content-center align-center">
+        <a href="#top"><img src="../img/top.svg" alt="Jump to top" /></a>
+    </div>
     <aside>
         <h2>Notifications</h2>
-        <p>Lorem ipsum dolor sit.</p>
-        <p>Quibusdam quo repellendus a.</p>
-        <p>Quidem magnam dicta exercitationem.</p>
-        <p>Magnam totam blanditiis earum?</p>
-        <p>Dolore temporibus nihil distinctio.</p>
+        <hr />
+        <br />
+        <div id="notifications">
+            <ul>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Aliquam quod sint eum architecto.</li>
+                <li>Maiores quam doloribus corporis in!</li>
+                <li>Incidunt vel cupiditate ipsum molestiae.</li>
+                <li>Iusto iure dicta nemo nostrum!</li>
+                <li>Aspernatur modi tenetur mollitia. Deserunt!</li>
+            </ul>
+        </div>
     </aside>
     <main>
         <section id="home">
-            <h1>ITI</h1>
+            <h1>To be changed</h1>
+            <hr />
+            <br />
+            <div class="corousel-container">
+                <ul class="corousel">
+                    <!-- <div id="prevbtn" class="slide-btn flex content-center align-center">
+                        <img src="../img/top.svg" alt="slide left" />
+                    </div>
+                    <div id="nextbtn" class="slide-btn flex content-center align-center">
+                        <img src="../img/top.svg" alt="slide right" />
+                    </div> -->
+                    <li>
+                        <img src="img/tec2.jpg" alt="" />
+                    </li>
+                    <li>
+                        <img src="img/tec1.jpg" alt="" />
+                    </li>
+                    <!-- <li>
+                        <img src="img/tec2.jpg" alt="" />
+                    </li> -->
+                </ul>
+                <br />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium suscipit doloribus nesciunt magnam pariatur dolorum repellat accusantium harum, vel exercitationem eius, iusto possimus rerum, inventore hic laborum facilis temporibus maxime!
+                </p>
+                <p>
+                    Officiis, cum? Beatae blanditiis corporis, non quam esse maiores doloribus adipisci est ratione soluta dignissimos consequuntur voluptas dolores aut maxime. Enim deleniti magni sed, voluptatibus ea doloremque est quo eaque.
+                </p>
+                <p>
+                    Porro, culpa tempore corporis quos molestiae dicta minus blanditiis aliquam eligendi amet asperiores error fugit fuga pariatur laudantium nisi natus quam nobis. Aliquid quis recusandae tempora officia consectetur sed nihil?
+                </p>
+                <p>
+                    Ex illum ipsum nemo quibusdam soluta maiores cupiditate asperiores, placeat facere est animi earum ipsa, harum alias aspernatur consectetur ab et deleniti architecto temporibus perspiciatis recusandae? Harum quas nulla qui.
+                </p>
+            </div>
+            <br />
         </section>
         <section id="about">
             <h2>About Us</h2>
+            <hr />
+            <br />
             <div>
                 <ul>
                     <li>
@@ -85,6 +134,8 @@
         </section>
         <section id="courses">
             <h2>Courses</h2>
+            <hr />
+            <br />
             <div>
                 <ul>
                     <li>
@@ -122,17 +173,18 @@
         </section>
         <section id="contact" class="flex col content-center align-center">
             <h2>Contact Form</h2>
+            <hr />
             <form class="flex col">
-                <label for=" name ">Name -
-            <input type="text " id="name " />
+                <label for=" name">Name -
+            <input type="text" id="name" required />
           </label>
                 <br />
-                <label for="mobile-number ">Mobile number -
-            <input type="number " id="mobile-number " />
+                <label for="mobile-number">Mobile number -
+            <input type="number" id="mobile-number" required />
           </label>
                 <br />
-                <label for="email ">Email Id -
-            <input type="email " id="email " />
+                <label for="email">Email Id -
+            <input type="email" id="email" required />
           </label>
             </form>
         </section>
@@ -148,8 +200,6 @@
     </div>
 </footer>
 
-<body>
-    <script src="script/nav.js "></script>
-</body>
+<body></body>
 
 </html>
