@@ -13,6 +13,19 @@ menubtn.addEventListener('click', () => {
     }
 })
 
+const navlist = document.querySelectorAll('.primary-nav>li');
+Array.from(navlist).forEach(element => {
+    element.addEventListener('click', (e) => {
+        if (element.id == "") {
+            element.id = "active";
+            console.log(element.offsetLeft);
+        } else if (e.offsetLeft != element.offsetLeft) {
+            element.id = "";
+        }
+    })
+});
+
+
 // not working
 
 // if (nav.id == 'nav-shown') {

@@ -12,7 +12,7 @@ slider = () => {
 }
 setInterval(() => {
     // slider();
-}, 5000);
+}, 4000);
 
 // slideBtn = document.getElementsByClassName('slide-btn');
 
