@@ -14,7 +14,6 @@ menubtn.addEventListener('click', () => {
 });
 
 
-
 // For showing scroll to top button
 
 let topbtn = document.querySelector('.topbtn');
