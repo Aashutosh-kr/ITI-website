@@ -618,6 +618,12 @@ footer a {
     .courses-grid {
         grid-template-columns: repeat(1, 100%);
     }
+.courses-grid li:focus .course-image,
+.courses-grid li:hover .course-image {
+    z-index: -100;
+    opacity: 1;
+    backdrop-filter: blur(0px);
+}
     .course-image {
         width: 100%;
     }
