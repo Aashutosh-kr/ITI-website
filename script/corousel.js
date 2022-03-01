@@ -5,14 +5,16 @@ slider = () => {
     Array.from(corouselList).forEach((element) => {
         if (element.style.transform != "translateX(-100%)") {
             element.style.transform = "translateX(-100%)";
+
         } else {
             element.style.transform = "translateX(0%)";
         }
+
     });
 }
 setInterval(() => {
     slider();
-}, 4000);
+}, 6000);
 
 slideBtn = document.getElementsByClassName('slide-btn');
 

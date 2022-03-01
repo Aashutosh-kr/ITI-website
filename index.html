@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <script src="script/navigation.js" defer></script>
-    <script src="script/corousel.js" defer></script>
+    <!-- <script src="script/corousel.js" defer></script> -->
 </head>
 <header class="flex space-between align-center">
     <a href="#main" class="skip-nav sr-only" tabindex="1">
@@ -24,7 +24,7 @@
     <button class="menu-btn"></button>
     <nav id="nav-hidden" class="flex align-center">
         <ul class="primary-nav flex gap ff-barlow-cond text-center text-white">
-            <li id="active">
+            <li id="">
                 <a href="#top">Home</a>
             </li>
             <li id="">
@@ -60,7 +60,7 @@
     </aside>
     <main id="main">
         <section id="home">
-            <h1>Main Heading</h1>
+            <h1>Welcome To <s>The Name</s> ITI</h1>
             <hr />
             <br />
             <div class="corousel-container">
@@ -69,7 +69,6 @@
                     <img src="img/tec1.jpg" alt="" />
                 </div>
             </div>
-
             <br />
             <div>
                 <p>
@@ -116,7 +115,7 @@
             <div>
                 <ul class="courses-grid">
                     <li class="course-1" tabindex="0">
-                        <h3>Lorem, ipsum.</h3>
+                        <h3>Electrician</h3>
                         <div class="course-container">
                             <img src="img/tec2.jpg" alt="course image" class="course-image" />
                             <p class="course-description">
@@ -125,7 +124,7 @@
                         </div>
                     </li>
                     <li class="course-2" tabindex="0">
-                        <h3>Lorem, ipsum.</h3>
+                        <h3>Fitter</h3>
                         <div class="course-container">
                             <img src="img/dummy.png" alt="course image" class="course-image" />
                             <p class="course-description">
@@ -134,7 +133,7 @@
                         </div>
                     </li>
                     <li class="course-3" tabindex="0">
-                        <h3>Lorem, ipsum.</h3>
+                        <h3>Welder</h3>
                         <div class="course-container">
                             <img src="img/dummy.png" alt="course image" class="course-image" />
                             <p class="course-description">
@@ -143,16 +142,7 @@
                         </div>
                     </li>
                     <li class="course-4" tabindex="0">
-                        <h3>Lorem, ipsum.</h3>
-                        <div class="course-container">
-                            <img src="img/dummy.png" alt="course image" class="course-image" />
-                            <p class="course-description">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
-                            </p>
-                        </div>
-                    </li>
-                    <li class="course-5" tabindex="0">
-                        <h3>Lorem, ipsum.</h3>
+                        <h3>Electronics Mechanic</h3>
                         <div class="course-container">
                             <img src="img/dummy.png" alt="course image" class="course-image" />
                             <p class="course-description">
@@ -165,8 +155,9 @@
         </section>
         <section id="contact" class="flex col content-center align-center">
             <h2>Contact Form</h2>
-            <!--  <hr /> -->
-            <form class="flex col">
+            <hr />
+            <br />
+            <form method="post" action="" class="flex col">
                 <div class="flex col sapce-between">
                     <label for=" name">Name -</label>
                     <input type="text" id="name" placeholder="Your Name" required />
