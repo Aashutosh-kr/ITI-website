@@ -1,6 +1,6 @@
 // For corousel
 
-const corouselList = document.querySelectorAll('.corousel>li');
+const corouselList = document.querySelectorAll('.corousel>img');
 slider = () => {
     Array.from(corouselList).forEach((element) => {
         if (element.style.transform != "translateX(-100%)") {
@@ -11,11 +11,11 @@ slider = () => {
     });
 }
 setInterval(() => {
-    // slider();
+    slider();
 }, 4000);
 
-// slideBtn = document.getElementsByClassName('slide-btn');
+slideBtn = document.getElementsByClassName('slide-btn');
 
-// Array.from(slideBtn).forEach(element => {
-//     element.addEventListener('click', slider());
-// });
+Array.from(slideBtn).forEach(element => {
+    element.addEventListener('click', slider());
+});

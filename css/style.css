@@ -363,11 +363,6 @@ main hr {
     height: 100%;
 }
 
-
-/* section {
-    border: 2px solid red;
-} */
-
 main section h1,
 main section:not(#contact) h2 {
     padding-top: calc(var(--header-height) + 2rem);
@@ -547,7 +542,7 @@ footer a {
         position: static;
     }
     .corousel {
-        width: 80%;
+        width: 90%;
     }
     .college-img {
         width: 90%;
@@ -618,12 +613,12 @@ footer a {
     .courses-grid {
         grid-template-columns: repeat(1, 100%);
     }
-.courses-grid li:focus .course-image,
-.courses-grid li:hover .course-image {
-    z-index: -100;
-    opacity: 1;
-    backdrop-filter: blur(0px);
-}
+    .courses-grid li:focus .course-image,
+    .courses-grid li:hover .course-image {
+        z-index: -100;
+        opacity: 1;
+        backdrop-filter: blur(0px);
+    }
     .course-image {
         width: 100%;
     }

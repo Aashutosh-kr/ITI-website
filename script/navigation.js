@@ -6,12 +6,12 @@ const nav = document.querySelector("nav");
 menubtn.addEventListener('click', () => {
     if (nav.id != 'nav-shown') {
         nav.id = 'nav-shown';
-        menubtn.style.backgroundImage = 'url("../img/icon-close.svg")';
+        menubtn.style.backgroundImage = 'url(../img/icon-close.svg)';
     } else {
         nav.id = 'nav-hidden';
-        menubtn.style.backgroundImage = 'url("../img/icon-hamburger.svg")';
+        menubtn.style.backgroundImage = 'url(../img/icon-hamburger.svg)';
     }
-})
+});
 
 
 
@@ -24,16 +24,13 @@ document.addEventListener('scroll', () => {
     } else {
         topbtn.style.display = "none";
     }
-})
+});
 
-// not working properly
+// For hiding navbar when clicked outside nav
 
-// if (nav.id == 'nav-shown') {
-    document.addEventListener('scroll', () => {
-        if (nav.id != 'nav-hidden') {
-            nav.id = 'nav-hidden';
-            menubtn.style.backgroundImage = 'url(../img/icon-hamburger.svg)';
-           // console.log('if');
-        }
-    })
-// }
+document.addEventListener('click', (event) => {
+    if (event.target.className !== "menu-btn" && event.target.tagName !== "nav" && event.target.id !== "nav-hidden") {
+        nav.id = 'nav-hidden';
+        menubtn.style.backgroundImage = 'url(../img/icon-hamburger.svg)';
+    }
+});
