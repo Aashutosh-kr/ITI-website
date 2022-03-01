@@ -9,14 +9,17 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="css/style.css" />
 
-    <script src="script/nav.js" defer></script>
+    <script src="script/navigation.js" defer></script>
     <!-- <script src="script/corousel.js" defer></script> -->
 </head>
 <header class="flex space-between align-center">
+    <a href="#main" class="skip-nav sr-only" tabindex="1">
+      Skip to Navigation</a
+    >
     <div class="logo">
-        <a href="index.html">
-            <img src="img/logo.svg" alt="ITI logo" />
-        </a>
+      <a href="index.html">
+        <img src="img/logo.svg" alt="ITI logo" />
+      </a>
     </div>
     <button class="menu-btn"></button>
     <nav id="nav-hidden" class="flex align-center">
@@ -38,7 +41,7 @@
 </header>
 <div id="top" class="grid-container">
     <div class="topbtn flex content-center align-center">
-        <a href="#top"><img src="img/top.svg" alt="Scroll to top" /></a>
+        <a href="#top" tabindex="1"><img src="img/top.svg" alt="Scroll to top" /></a>
     </div>
     <aside>
         <h2>Notifications</h2>
@@ -55,7 +58,7 @@
             </ul>
         </div>
     </aside>
-    <main>
+    <main id="main">
         <section id="home">
             <h1>Main Heading</h1>
             <hr />
@@ -90,29 +93,21 @@
             <hr />
             <br />
             <div>
-                <ul>
-                    <li>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam sequi dicta repudiandae consectetur deserunt necessitatibus laborum fugit? Aperiam perferendis esse quo eius et ratione voluptatem ut aliquid minus nesciunt.
-                    </li>
-                    <li>
-                        Fuga tenetur dicta quasi veritatis rem. Error eum illum, quod temporibus distinctio aut incidunt fugit quibusdam eius magni minus repudiandae quos repellendus maiores ducimus, deserunt sint quo illo eaque! Repudiandae.
-                    </li>
-                    <li>
-                        Voluptatum cupiditate, animi hic quam autem minima consectetur ducimus pariatur magnam modi veniam illum alias eveniet eos, architecto, voluptate voluptates repellat tempore ex ipsum laborum dolore? Eius tenetur odit inventore.
-                    </li>
-                    <li>
-                        Dignissimos fugit facere quaerat dolor, facilis maxime, molestiae rerum eaque consequuntur iste saepe, voluptates nisi deleniti minus! Dicta deleniti sint, expedita rem laborum veritatis a provident quam quisquam voluptatem sequi!
-                    </li>
-                    <li>
-                        Minima necessitatibus quae, ipsam rerum pariatur animi eos, magnam inventore voluptatem minus voluptate a ipsa voluptatum tenetur expedita voluptas ad et veniam dicta illo! Incidunt veniam illum eligendi officiis reprehenderit.
-                    </li>
-                    <li>
-                        Eius, dolorum delectus iure tenetur impedit magnam quos alias nisi incidunt quae a atque quis perferendis beatae voluptates dolores repudiandae eos amet deleniti quibusdam? Magni suscipit placeat reprehenderit consequatur totam.
-                    </li>
-                    <li>
-                        Ex, cumque totam non dicta animi rem aperiam facere laborum maiores architecto ipsum! Minima esse libero mollitia amet odit placeat reiciendis, earum est eaque exercitationem numquam, pariatur distinctio consequatur voluptatibus.
-                    </li>
-                </ul>
+                <div class="college-img">
+                    <img src="img/tec1.jpg" alt="Name ITI college building" />
+                </div>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, nesciunt porro, optio provident nihil quo reiciendis delectus minus laudantium necessitatibus a obcaecati quaerat. Voluptate facere hic earum voluptatibus debitis necessitatibus.
+                </p>
+                <p>
+                    Quaerat illo animi incidunt mollitia pariatur quos tempore odio odit est sequi. Officia facere excepturi minus ipsum, nobis quidem ex obcaecati in molestiae qui blanditiis asperiores dolorum facilis! Itaque, ratione.
+                </p>
+                <p>
+                    Eligendi quod fugiat voluptate itaque sint asperiores. Molestiae quam cumque, commodi a ipsum praesentium non minima aliquam culpa eveniet vel consequuntur? Quam amet veniam explicabo odit vitae, molestiae deleniti cupiditate.
+                </p>
+                <p>
+                    Non aut architecto iure aliquid aliquam molestias reiciendis tempora, praesentium, explicabo eaque nemo pariatur similique nam esse eius, obcaecati ea accusamus consequuntur fugiat itaque saepe nihil officiis atque perspiciatis. Quasi.
+                </p>
             </div>
         </section>
         <section id="courses">
@@ -121,42 +116,57 @@
             <br />
             <div>
                 <ul class="courses-grid">
-                    <li class="course-1">
-                        <img src="img/tec2.jpg" alt="course image" class="course-image" />
-                        <p class="course-description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
-                        </p>
+                    <li class="course-1" tabindex="0">
+                        <h3>Lorem, ipsum.</h3>
+                        <div class="course-container">
+                            <img src="img/tec2.jpg" alt="course image" class="course-image" />
+                            <p class="course-description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
+                            </p>
+                        </div>
                     </li>
-                    <li class="course-2">
-                        <img src="img/dummy.png" alt="course image" class="course-image" />
-                        <p class="course-description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
-                        </p>
+                    <li class="course-2" tabindex="0">
+                        <h3>Lorem, ipsum.</h3>
+                        <div class="course-container">
+                            <img src="img/dummy.png" alt="course image" class="course-image" />
+                            <p class="course-description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
+                            </p>
+                        </div>
                     </li>
-                    <li class="course-3">
-                        <img src="img/dummy.png" alt="course image" class="course-image" />
-                        <p class="course-description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
-                        </p>
+                    <li class="course-3" tabindex="0">
+                        <h3>Lorem, ipsum.</h3>
+                        <div class="course-container">
+                            <img src="img/dummy.png" alt="course image" class="course-image" />
+                            <p class="course-description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
+                            </p>
+                        </div>
                     </li>
-                    <li class="course-4">
-                        <img src="img/dummy.png" alt="course image" class="course-image" />
-                        <p class="course-description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
-                        </p>
+                    <li class="course-4" tabindex="0">
+                        <h3>Lorem, ipsum.</h3>
+                        <div class="course-container">
+                            <img src="img/dummy.png" alt="course image" class="course-image" />
+                            <p class="course-description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
+                            </p>
+                        </div>
                     </li>
-                    <li class="course-5">
-                        <img src="img/dummy.png" alt="course image" class="course-image" />
-                        <p class="course-description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
-                        </p>
+                    <li class="course-5" tabindex="0">
+                        <h3>Lorem, ipsum.</h3>
+                        <div class="course-container">
+                            <img src="img/dummy.png" alt="course image" class="course-image" />
+                            <p class="course-description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, voluptatum nesciunt. Consequatur totam, ab expedita consectetur iste possimus earum incidunt aliquid sint odio vitae mollitia numquam pariatur, rerum officiis tenetur!
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </div>
         </section>
         <section id="contact" class="flex col content-center align-center">
             <h2>Contact Form</h2>
-          <!--  <hr /> -->
+            <!--  <hr /> -->
             <form class="flex col">
                 <div class="flex col sapce-between">
                     <label for=" name">Name -</label>

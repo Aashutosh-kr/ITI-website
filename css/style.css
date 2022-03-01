@@ -160,6 +160,24 @@ body {
     background-color: hsl(var(--color-light));
 }
 
+
+/* for skiping navigation*/
+
+.skip-nav {
+    position: absolute;
+    z-index: 10000;
+    bottom: -3rem;
+    left: 1rem;
+    width: 8rem;
+    height: 2rem;
+    transform: translateX(-150%);
+    transition: var(--transition-primary);
+}
+
+.skip-nav:focus {
+    transform: translateX(0%);
+}
+
 header {
     position: fixed;
     z-index: 1000;
@@ -267,7 +285,7 @@ nav {
 
 .topbtn:hover,
 .topbtn:active {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .topbtn a {
@@ -303,9 +321,24 @@ aside {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     text-align: center;
     margin-bottom: 2rem;
+    font-family: var(--ff-barlow);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8;
 }
 
 aside hr,
@@ -340,19 +373,6 @@ main section:not(#contact) h2 {
     padding-top: calc(var(--header-height) + 2rem);
 }
 
-h1,
-h2 {
-    font-family: var(--ff-barlow);
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
 main section,
 main section:not(#contact) {
     min-height: 100vh;
@@ -364,6 +384,15 @@ main section>div {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
+}
+
+.college-img {
+    width: 70%;
+    margin-inline: auto;
+}
+
+.college-img img {
+    width: 100%;
 }
 
 .courses-grid {
@@ -384,9 +413,12 @@ main section>div {
 }
 
 .courses-grid li {
-    position: relative;
     transition: var(--transition-primary);
     margin: auto;
+}
+
+.course-container {
+    position: relative;
 }
 
 .course-description {
@@ -399,12 +431,14 @@ main section>div {
     opacity: 0;
 }
 
+.courses-grid li:focus .course-image,
 .courses-grid li:hover .course-image {
     z-index: -100;
     opacity: 0.3;
     backdrop-filter: blur(10px);
 }
 
+.courses-grid li:focus .course-description,
 .courses-grid li:hover .course-description {
     z-index: 10;
     background-color: hsl(var(--color-light), 0.4);
@@ -460,6 +494,15 @@ form textarea {
     width: max-content;
     padding: 0.2rem 1rem;
     margin-inline: auto;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#submit:hover,
+#submit:focus {
+    background-color: hsl(var(--color-dark));
+    color: hsl(var(--color-white));
+    border-color: hsl(var(--color-white));
 }
 
 footer {
@@ -504,7 +547,10 @@ footer a {
         position: static;
     }
     .corousel {
-        width: 100%;
+        width: 80%;
+    }
+    .college-img {
+        width: 90%;
     }
     .courses-grid {
         grid-template-columns: repeat(1, 80%);
@@ -563,15 +609,22 @@ footer a {
     aside {
         width: 100%;
     }
+    .corousel {
+        width: 100%;
+    }
+    .college-img {
+        width: 100%;
+    }
     .courses-grid {
         grid-template-columns: repeat(1, 100%);
     }
     .course-image {
         width: 100%;
     }
-.course-description {
-    position:static;
-}
+    .course-description {
+        position: static;
+        opacity: 1;
+    }
     form {
         width: 100%;
         padding: 1.5rem;
