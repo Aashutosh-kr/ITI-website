@@ -29,7 +29,7 @@ document.addEventListener('scroll', () => {
 // not working properly
 
 if (nav.id == 'nav-shown') {
-    document.addEventListener('click', () => {
+    document.addEventListener('scroll', () => {
         if (nav.id != 'nav-hidden') {
             nav.id = 'nav-hidden';
             menubtn.style.backgroundImage = 'url(../img/icon-hamburger.svg)';
