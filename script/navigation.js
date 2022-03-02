@@ -30,6 +30,6 @@ document.addEventListener('scroll', () => {
 document.addEventListener('click', (event) => {
     if (event.target.className !== "menu-btn" && event.target.tagName !== "nav" && event.target.id !== "nav-hidden") {
         nav.id = 'nav-hidden';
-        menubtn.style.backgroundImage = 'url(../img/icon-hamburger.svg)';
+        menubtn.style.backgroundImage = 'url(img/icon-hamburger.svg)';
     }
 });
