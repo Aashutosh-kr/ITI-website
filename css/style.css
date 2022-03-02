@@ -508,7 +508,9 @@ main section>div {
 #contact {
     min-height: 80vh;
 }
-
+#contact hr{
+    margin-bottom: 1rem;
+}
 #contact hr,
 #contact div.contacts {
     width: 65%;
