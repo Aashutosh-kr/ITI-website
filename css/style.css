@@ -310,7 +310,6 @@ nav {
 }
 
 aside {
-    /* border: 2px solid red; */
     position: sticky;
     top: calc(var(--header-height) + 2rem);
     bottom: 0;
@@ -404,6 +403,27 @@ main section>div {
     width: 100%;
 }
 
+.info {
+    transition: var(--transition-primary);
+    animation: zoom 1s linear infinite forwards;
+}
+
+.info:hover {
+    animation-play-state: paused;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(2, 48%);
@@ -416,13 +436,14 @@ main section>div {
     width: 100%;
 }
 
-.courses-grid li {
+.courses-grid>li {
     transition: var(--transition-primary);
     margin: auto;
 }
 
 .course-container {
     position: relative;
+    overflow: hidden;
 }
 
 .course-description {
@@ -432,7 +453,41 @@ main section>div {
     width: 100%;
     height: 100%;
     padding: 1rem;
+    font-weight: 600;
+    transition: var(--transition-primary);
     opacity: 0;
+}
+
+.course-description ul {
+    width: 15rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-description li {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #000;
+}
+
+.course-1 .course-description {
+    transform: translateY(100%);
+}
+
+.course-2 .course-description {
+    transform: translateX(100%);
+}
+
+.course-3 .course-description {
+    transform: translateX(-100%);
+}
+
+.course-4 .course-description {
+    transform: translateY(-100%);
 }
 
 .courses-grid li:focus .course-image,
@@ -445,8 +500,9 @@ main section>div {
 .courses-grid li:focus .course-description,
 .courses-grid li:hover .course-description {
     z-index: 10;
-    background-color: hsl(var(--color-light), 0.4);
     opacity: 1;
+    transform: translateY(0%);
+    background-color: hsl(var(--color-light), 0.4);
 }
 
 #contact {
@@ -589,6 +645,9 @@ footer a {
     .college-img {
         width: 100%;
     }
+    .info {
+        display: none;
+    }
     .courses-grid {
         grid-template-columns: repeat(1, 100%);
     }
@@ -604,6 +663,18 @@ footer a {
     .course-description {
         position: static;
         opacity: 1;
+    }
+    .course-1 .course-description {
+        transform: translateY(0%);
+    }
+    .course-2 .course-description {
+        transform: translateX(0%);
+    }
+    .course-3 .course-description {
+        transform: translateX(0%);
+    }
+    .course-4 .course-description {
+        transform: translateY(0%);
     }
     #contact hr,
     #contact div.contacts {
