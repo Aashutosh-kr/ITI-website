@@ -275,9 +275,6 @@ nav {
     z-index: 9999;
     bottom: 2rem;
     right: 2rem;
-}
-
-.topbtn {
     height: 2.5rem;
     width: 2.5rem;
     cursor: pointer;

@@ -15,9 +15,3 @@ slider = () => {
 setInterval(() => {
     slider();
 }, 6000);
-
-slideBtn = document.getElementsByClassName('slide-btn');
-
-Array.from(slideBtn).forEach(element => {
-    element.addEventListener('click', slider());
-});
