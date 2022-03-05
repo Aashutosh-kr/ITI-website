@@ -526,7 +526,6 @@ div.contacts section {
 
 footer {
     width: 100%;
-    min-height: 20vh;
     padding: 1rem;
     color: hsl(var(--color-light));
     font-size: 1.03rem;
