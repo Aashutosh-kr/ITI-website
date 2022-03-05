@@ -501,7 +501,7 @@ main section>div {
 }
 
 #contact {
-    min-height: 80vh;
+    min-height: 90vh;
 }
 
 #contact hr {
@@ -510,7 +510,7 @@ main section>div {
 
 #contact hr,
 #contact div.contacts {
-    width: 65%;
+    width: 80vw;
 }
 
 div.contacts img {
