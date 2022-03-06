@@ -359,7 +359,7 @@ main>section:not(#contact) {
     min-height: 100vh;
 }
 
-main section>div {
+main>section>div:first-of-type {
     font-size: 1.3rem;
     padding: 1.5rem;
     border-radius: 10px;
@@ -380,6 +380,18 @@ main section>div {
     width: 100%;
     height: 100%;
     transition: var(--transition-corousel);
+}
+
+.staffs img {
+    width: 23rem;
+    height: auto;
+    border-radius: 20%;
+}
+
+.staffs p {
+    font-family: var(--ff-bellefair);
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .intro-container {
@@ -525,6 +537,11 @@ div.contacts section {
     font-family: var(--ff-bellefair);
 }
 
+div.contacts section:not(:last-child) {
+    padding: 0 0 .5rem 0;
+    border-bottom: 2px solid white;
+}
+
 footer {
     width: 100%;
     padding: 1rem;
@@ -573,6 +590,9 @@ footer a {
     }
     .intro-container {
         width: 90%;
+    }
+    .staff {
+        justify-content: space-around;
     }
     .college-img {
         width: 90%;
@@ -637,6 +657,17 @@ footer a {
     }
     .corousel {
         width: 100%;
+    }
+    .staff {
+        flex-direction: column;
+    }
+    .staff img {
+        width: 60%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    .staff:nth-child(2) {
+        flex-direction: column-reverse;
     }
     .intro-container {
         width: 95%;
