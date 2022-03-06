@@ -149,6 +149,10 @@ a {
     text-transform: uppercase;
 }
 
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+
 
 /* main css */
 
@@ -341,6 +345,7 @@ aside hr,
 main hr {
     border-top: 2px solid hsl(var(--color-white));
     box-shadow: var(--shadow);
+    margin-bottom: 1rem;
 }
 
 #home,
@@ -502,10 +507,6 @@ main section>div {
 
 #contact {
     min-height: 80vh;
-}
-
-#contact hr {
-    margin-bottom: 1rem;
 }
 
 #contact hr,
